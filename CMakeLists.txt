@@ -42,10 +42,9 @@ FetchContent_Declare(optional-lite
 )
 FetchContent_MakeAvailable(optional-lite)
 
-target_link_libraries(${PROJECT_NAME} optional-lite)
+target_link_libraries(${PROJECT_NAME} pthread optional-lite)
 
 if (BUILD_SIGHAN_TESTS)
-    enable_testing()
     add_subdirectory(tests)
 endif()
 
